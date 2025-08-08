@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   return (
     <div>
-      <h1>ConVerse</h1>
+      <h1>ConwayVerse</h1>
       <p>A Configurable Game of Life.</p>
     </div>
   );
