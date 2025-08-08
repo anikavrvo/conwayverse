@@ -18,7 +18,6 @@
 - Configurable bubble size (neighborhood radius)
 - Click-to-edit initial grid state
 - One-step or continuous simulation modes
-- Minimal UI with fast, reactive controls (React + TypeScript)
 
 ---
 
