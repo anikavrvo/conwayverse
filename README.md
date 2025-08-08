@@ -9,7 +9,7 @@
 - ⚙️ Flexible update rules based on neighborhood patterns
 - 🎮 An interactive grid to design the initial world and simulate its evolution
 
----
+
 
 ## ✨ Features
 
@@ -19,13 +19,13 @@
 - Click-to-edit initial grid state
 - One-step or continuous simulation modes
 
----
+
 
 ## 🧪 Live Demo (coming soon)
 
 [🚀 Try ConwayVerse on CodeSandbox](https://codesandbox.io/...)
 
----
+
 
 ## 🛠️ Getting Started (not yet implemented!)
 
