@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# ConwayVerse 🧬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A configurable, dimensional twist on Conway’s Game of Life.
 
-Currently, two official plugins are available:
+**ConwayVerse** will be a customizable cellular automaton simulator where users can define:
+- 🔢 Number of dimensions (2D or 3D)
+- 🌐 Size of a cell’s “bubble” (neighborhood radius)
+- 🎨 Custom cell states (more than just alive/dead)
+- ⚙️ Flexible update rules based on neighborhood patterns
+- 🎮 An interactive grid to design the initial world and simulate its evolution
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 2D and 3D grid support (coming soon)
+- Rule-based engine for multi-state evolution
+- Configurable bubble size (neighborhood radius)
+- Click-to-edit initial grid state
+- One-step or continuous simulation modes
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Live Demo (coming soon)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[🚀 Try ConwayVerse on CodeSandbox](https://codesandbox.io/...)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+
+## 🛠️ Getting Started (not yet implemented!)
+
+Clone and run locally:
+
+```bash
+git clone https://github.com/yourusername/conwayverse
+cd conwayverse
+npm install
+npm run dev
 ```
