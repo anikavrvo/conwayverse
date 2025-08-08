@@ -3,6 +3,7 @@
 > A configurable, dimensional twist on Conway’s Game of Life.
 
 **ConwayVerse** will be a customizable cellular automaton simulator where users can define:
+
 - 🔢 Number of dimensions (2D or 3D)
 - 🌐 Size of a cell’s “bubble” (neighborhood radius)
 - 🎨 Custom cell states (more than just alive/dead)
@@ -21,13 +22,16 @@
 
 
 
-## 🧪 Live Demo (coming soon)
-
-[🚀 Try ConwayVerse on CodeSandbox](https://codesandbox.io/...)
+## 🧪 Live Demo
 
 
+[Play around in ConwayVerse here](https://conwayverse.vercel.app/)
 
-## 🛠️ Getting Started (not yet implemented!)
+[If you'd like to mess around with the code in your browser and see real-time results, try ConwayVerse on CodeSandbox](https://codesandbox.io/s/github/anikavrvo/conwayverse)
+
+
+
+## 🛠️ Getting Started 
 
 Clone and run locally:
 
