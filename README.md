@@ -22,7 +22,7 @@
 
 
 
-## 🧪 Live Demo
+## 🧪 Live Demo - To Be Completed
 
 
 [Play around in ConwayVerse here](https://conwayverse.vercel.app/)
