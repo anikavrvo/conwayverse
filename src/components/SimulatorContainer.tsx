@@ -191,7 +191,9 @@ export const SimulatorContainer: React.FC = () => {
               showGrid={cellSize > 5}
             />
           </div>
+        </main>
 
+        <aside className="controls-sidebar">
           <SimulationControls
             isRunning={isRunning}
             generation={generation}
@@ -220,7 +222,7 @@ export const SimulatorContainer: React.FC = () => {
               </span>
             </div>
           </div>
-        </main>
+        </aside>
       </div>
     </div>
   );

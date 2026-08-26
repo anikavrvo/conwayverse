@@ -31,11 +31,11 @@
 
 .simulator-layout {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 300px 1fr 300px;
   gap: 20px;
   padding: 20px;
   flex: 1;
-  overflow: auto;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
 }
@@ -44,22 +44,32 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-height: calc(100vh - 180px);
+  height: 100%;
   overflow-y: auto;
 }
 
 .simulator-main {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .grid-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex: 1;
-  min-height: 400px;
+  width: 100%;
+  min-height: 0;
+}
+
+.controls-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .edit-controls {
@@ -162,8 +172,8 @@
 }
 
 .info-panel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   padding: 16px;
   background: white;
@@ -174,8 +184,10 @@
 
 .info-item {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
   padding: 12px;
   background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
   border-radius: 6px;
@@ -197,12 +209,20 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .simulator-layout {
+    grid-template-columns: 280px 1fr 280px;
+  }
+}
+
 @media (max-width: 1024px) {
   .simulator-layout {
     grid-template-columns: 1fr;
   }
 
-  .config-sidebar {
+  .config-sidebar,
+  .controls-sidebar {
+    height: auto;
     max-height: auto;
   }
 }
@@ -221,25 +241,30 @@
     gap: 12px;
   }
 
-  .info-panel {
-    grid-template-columns: 1fr;
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-/* Custom scrollbar */
-.config-sidebar::-webkit-scrollbar {
+/* Custom scrollbar for sidebars */
+.config-sidebar::-webkit-scrollbar,
+.controls-sidebar::-webkit-scrollbar {
   width: 6px;
 }
 
-.config-sidebar::-webkit-scrollbar-track {
+.config-sidebar::-webkit-scrollbar-track,
+.controls-sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.config-sidebar::-webkit-scrollbar-thumb {
+.config-sidebar::-webkit-scrollbar-thumb,
+.controls-sidebar::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
 }
 
-.config-sidebar::-webkit-scrollbar-thumb:hover {
+.config-sidebar::-webkit-scrollbar-thumb:hover,
+.controls-sidebar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
