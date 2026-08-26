@@ -8,8 +8,7 @@ import {
   Simulation,
   PresetConfigs,
   Grid,
-  type SimulationConfig,
-  type Coordinate,
+  type SimulationConfig
 } from '../engine';
 import { GridRenderer } from './GridRenderer';
 import { SimulationControls } from './SimulationControls';

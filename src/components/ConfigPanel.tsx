@@ -6,8 +6,6 @@
 import React, { useState } from 'react';
 import {
   type SimulationConfig,
-  type GridConfig,
-  type NeighborhoodConfig,
   PresetConfigs,
   Patterns,
 } from '../engine';
