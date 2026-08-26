@@ -152,6 +152,29 @@ export const SimulatorContainer: React.FC = () => {
             onConfigChange={handleConfigChange}
             onPatternApply={handlePatternApply}
           />
+        </aside>
+
+        <main className="simulator-main">
+          <div className="grid-container">
+            <GridRenderer
+              grid={grid}
+              cellSize={cellSize}
+              onCellClick={handleCellClick}
+              showGrid={cellSize > 5}
+            />
+          </div>
+        </main>
+
+        <aside className="controls-sidebar">
+          <SimulationControls
+            isRunning={isRunning}
+            generation={generation}
+            speed={speed}
+            onPlayPause={handlePlayPause}
+            onStep={handleStep}
+            onReset={handleReset}
+            onSpeedChange={setSpeed}
+          />
 
           <div className="edit-controls">
             <h3>Edit Mode</h3>
@@ -179,48 +202,6 @@ export const SimulatorContainer: React.FC = () => {
             <p className="edit-hint">
               {editMode ? 'Click cells to toggle state' : 'Enable to edit grid'}
             </p>
-          </div>
-        </aside>
-
-        <main className="simulator-main">
-          <div className="grid-container">
-            <GridRenderer
-              grid={grid}
-              cellSize={cellSize}
-              onCellClick={handleCellClick}
-              showGrid={cellSize > 5}
-            />
-          </div>
-        </main>
-
-        <aside className="controls-sidebar">
-          <SimulationControls
-            isRunning={isRunning}
-            generation={generation}
-            speed={speed}
-            onPlayPause={handlePlayPause}
-            onStep={handleStep}
-            onReset={handleReset}
-            onSpeedChange={setSpeed}
-          />
-
-          <div className="info-panel">
-            <div className="info-item">
-              <span className="info-label">Grid Size:</span>
-              <span className="info-value">
-                {grid.getSizes().join(' × ')}
-              </span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Neighborhood:</span>
-              <span className="info-value">r={config.neighborhood.radius}</span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Status:</span>
-              <span className="info-value">
-                {isRunning ? '🟢 Running' : '⏸ Paused'}
-              </span>
-            </div>
           </div>
         </aside>
       </div>
