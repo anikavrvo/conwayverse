@@ -7,6 +7,7 @@ export { Grid } from './Grid';
 export { Neighborhood } from './Neighborhood';
 export { RuleEngine } from './RuleEngine';
 export { Simulation } from './Simulation';
+export { PresetConfigs, Patterns } from './presets';
 
 export type {
   Coordinate,
